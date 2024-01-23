@@ -93,7 +93,7 @@ public abstract class ActionBase {
      */
     protected void redirect(ForwardConst action, ForwardConst command) throws ServletException, IOException {
         //URLを構築
-        String redirectUrl = request.getContextPath() + "/?action=" + command.getValue();
+        String redirectUrl = request.getContextPath() + "/?action=" + action.getValue();
         if (command != null) {
             redirectUrl = redirectUrl + "&command=" + command.getValue();
         }
